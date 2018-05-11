@@ -77,7 +77,7 @@ getCode = (language,languages) ->
 
 module.exports = (robot) ->
   language_choices = (language for _, language of languages).sort().join('|')
-  pattern = new RegExp('gtranslate?' +
+  pattern = new RegExp('gtranslate' +
                        "(?: from (#{language_choices}))?" +
                        "(?: (?:in)?to (#{language_choices}))?" +
                        '(.*)', 'i')
